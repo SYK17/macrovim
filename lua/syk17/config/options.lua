@@ -3,8 +3,8 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- tabs & indents
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
@@ -14,6 +14,13 @@ vim.opt.wrap = false
 --search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.incsearch = true
 
 -- clipboard
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+
+-- misc.
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 50
