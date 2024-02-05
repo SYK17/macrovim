@@ -1,8 +1,21 @@
 return {
-    {
-        'SYK17/Mies.vim',
+    {   'kdheepak/monochrome.nvim',
         lazy = false,
         priority = 1000,
+        config = function()
+            vim.cmd ([[colorscheme monochrome]])
+        end,
+            },
+    {
+        'SYK17/candle-grey',
+        lazy = true,
+        config = function()
+            vim.cmd([[colorscheme candle-grey-transparent]])
+        end,
+    },
+    {
+        'SYK17/Mies.vim',
+        lazy = true,
         config = function()
             vim.cmd([[colorscheme mies]])
         end,
@@ -12,14 +25,6 @@ return {
         lazy = true,
         config = function()
             vim.cmd([[colorscheme rams]])
-        end,
-    },
-
-    {
-        'SYK17/candle-grey',
-        lazy = true,
-        config = function()
-            vim.cmd([[colorscheme candle-grey-transparent]])
         end,
     },
 }

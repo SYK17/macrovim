@@ -11,6 +11,9 @@ vim.opt.autoindent = true
 -- line wrapping
 vim.opt.wrap = false
 
+-- cursor line
+vim.opt.cursorline = true
+
 --search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

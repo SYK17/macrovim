@@ -23,7 +23,7 @@ vim.keymap.set("v", "<leader>p", '"_dp')
 
 -- move highlighted texts
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv") -- TODO K not working
 
 -- cursor stays in place when using 'J'
 vim.keymap.set("n", "J", "mzJ`z")
