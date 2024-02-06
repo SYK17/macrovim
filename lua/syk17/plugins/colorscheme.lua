@@ -1,11 +1,25 @@
 return {
-    {   'kdheepak/monochrome.nvim',
+    {   'andreasvc/vim-256noir',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd ([[colorscheme monochrome]])
+            vim.cmd([[colorscheme 256_noir]])
         end,
             },
+    {
+        'kdheepak/monochrome.nvim',
+        lazy = true,
+        config = function()
+            vim.cmd([[colorscheme monochrome]])
+        end,
+    },
+    {
+        'jaredgorski/fogbell.vim',
+        lazy = true,
+        config = function()
+            vim.cmd([[colorscheme fogbell]])
+        end,
+    },
     {
         'SYK17/candle-grey',
         lazy = true,
@@ -20,7 +34,6 @@ return {
             vim.cmd([[colorscheme mies]])
         end,
     },
-
     {   'SYK17/rams.vim',
         lazy = true,
         config = function()
