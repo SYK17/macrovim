@@ -16,7 +16,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", "jk", "<right>")
 
 -- clear search highlights
-vim.keymap.set("n", "<leader>nh", ":nohl<CR>")
+vim.keymap.set("n", "<leader>no", ":nohl<CR>")
 
 -- the greatest remap ever?
 vim.keymap.set("v", "<leader>p", '"_dp')

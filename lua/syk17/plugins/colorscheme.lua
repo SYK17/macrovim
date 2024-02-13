@@ -1,9 +1,9 @@
 return {
-    {   'SYK17/candle-grey',
+    {   'andreasvc/vim-256noir',
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd([[colorscheme candle-grey]])
+            vim.cmd([[colorscheme 256_noir]])
         end,
             },
     {
@@ -21,10 +21,10 @@ return {
         end,
     },
     {
-        'andreasvc/vim-256noir',
+        'SYK17/candle-grey',
         lazy = true,
         config = function()
-            vim.cmd([[colorscheme 256_noir]])
+            vim.cmd([[colorscheme candle-grey]])
         end,
     },
     {
