@@ -8,34 +8,34 @@ return {
             },
     {
         'kdheepak/monochrome.nvim',
-        lazy = true,
+        -- lazy = true,
         config = function()
             vim.cmd([[colorscheme monochrome]])
         end,
     },
     {
         'jaredgorski/fogbell.vim',
-        lazy = true,
+        -- lazy = true,
         config = function()
             vim.cmd([[colorscheme fogbell]])
         end,
     },
     {
         'SYK17/candle-grey',
-        lazy = true,
+        -- lazy = true,
         config = function()
             vim.cmd([[colorscheme candle-grey]])
         end,
     },
     {
         'SYK17/Mies.vim',
-        lazy = true,
+        -- lazy = true,
         config = function()
             vim.cmd([[colorscheme mies]])
         end,
     },
     {   'SYK17/rams.vim',
-        lazy = true,
+        -- lazy = true,
         config = function()
             vim.cmd([[colorscheme rams]])
         end,

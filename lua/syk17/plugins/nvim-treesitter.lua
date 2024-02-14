@@ -17,7 +17,6 @@ return {
           "markdown_inline",
           "lua",
           "vim",
-          "query",
           "python",
         },
       })
