@@ -6,12 +6,17 @@ return {
             vim.cmd([[colorscheme kanagawa-dragon]])
         end,
     },
-    {   'andreasvc/vim-256noir',
+    {   'yorickpeterse/nvim-grey',
+        lazy = true,
+        config = function()
+            vim.cmd([[colorscheme grey]])
+        end,
+    },    {   'andreasvc/vim-256noir',
         lazy = true,
         config = function()
             vim.cmd([[colorscheme 256_noir]])
         end,
-            },
+    },
     {
         'kdheepak/monochrome.nvim',
         lazy = true,
