@@ -37,6 +37,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- better gg/G
 vim.keymap.set("n", "gg", "gg0")
 vim.keymap.set("n", "G", "G$")
+vim.keymap.set("v", "gg", "gg0")
+vim.keymap.set("v", "G", "G$")
+
 
 --------------------
 -- Plugins
