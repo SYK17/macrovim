@@ -23,7 +23,7 @@ vim.keymap.set("v", "<leader>p", '"_dp')
 
 -- move highlighted texts
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv") -- TODO K not working
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- cursor stays in place when using 'J'
 vim.keymap.set("n", "J", "mzJ`z")
@@ -33,6 +33,10 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- quick tmux-sessionizer shortcut. TODO?
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- better gg/G
+vim.keymap.set("n", "gg", "gg0")
+vim.keymap.set("n", "G", "G$")
 
 --------------------
 -- Plugins
