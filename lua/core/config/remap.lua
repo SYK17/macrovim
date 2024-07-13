@@ -41,6 +41,8 @@ vim.keymap.set("n", "G", "G$")
 vim.keymap.set("v", "gg", "gg0")
 vim.keymap.set("v", "G", "G$")
 
+-- makes :E force default "Explore" over "EditQuery"
+vim.api.nvim_create_user_command('E', 'Explore', {force = true})
 
 --------------------
 -- Plugins
