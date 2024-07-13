@@ -11,13 +11,6 @@ return {
         end,
     },
     {
-        'neanias/everforest-nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme everforest]])
-        end,
-    },
-    {
         'logico/typewriter',
         lazy = false,
         config = function()
@@ -69,11 +62,4 @@ return {
             vim.cmd([[colorscheme rams]])
         end,
     },
-    {   'rose-pine/neovim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme rose-pine]])
-        end,
-    },
-
 }

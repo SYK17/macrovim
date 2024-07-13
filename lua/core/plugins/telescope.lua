@@ -21,9 +21,9 @@ return {
             },
         })
 
-        vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>", {})
-        vim.keymap.set("n", "<leader>pr", "<cmd>Telescope oldfiles<cr>", {})
-        vim.keymap.set("n", "<leader>ps", "<cmd>Telescope live_grep<cr>", {})
+        vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", {})
+        vim.keymap.set("n", "<leader>r", "<cmd>Telescope oldfiles<cr>", {})
+        vim.keymap.set("n", "<leader>s", "<cmd>Telescope live_grep<cr>", {})
         vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", {})
         vim.keymap.set("n", "<leader>t", "<cmd>Telescope colorscheme<cr>", {})
     end,
