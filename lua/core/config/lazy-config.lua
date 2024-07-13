@@ -1,3 +1,7 @@
+----------------------------------
+-- Lazy.nvim plug in manager setup
+----------------------------------
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -11,15 +15,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{ import = "syk17.plugins" }, { import = "syk17.plugins.lsp"}}, {
+require("lazy").setup({{ import = "core.plugins" }, { import = "core.plugins.lsp"}, { import = "core.plugins.dap"}}, {
     install = {
         colorscheme = { "mies" },
     },
     checker = {
         enabled = true,
-        notify = false,
+        notify = true,
     },
     change_detection = {
-        notify = false,
+        notify = true,
     },
 })
