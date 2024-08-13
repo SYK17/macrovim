@@ -1,3 +1,7 @@
+--------------------------------
+-- Dynamic Neovim Configurations
+--------------------------------
+
 --  Absolute line number in insert
 vim.api.nvim_create_autocmd("InsertEnter", {
     callback = function()
