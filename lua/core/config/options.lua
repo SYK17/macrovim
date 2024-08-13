@@ -1,6 +1,6 @@
---------------------------------
--- General Neovim configurations
---------------------------------
+---------------------------------------
+-- General Static Neovim configurations
+---------------------------------------
 
 -- line numbers
 vim.opt.relativenumber = true

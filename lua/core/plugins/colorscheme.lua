@@ -62,4 +62,10 @@ return {
             vim.cmd([[colorscheme rams]])
         end,
     },
+    {   'shatur/neovim-ayu',
+        lazy = false,
+        config = function()
+
+        end,
+    },
 }

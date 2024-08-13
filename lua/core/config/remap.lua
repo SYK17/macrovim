@@ -17,7 +17,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- poor mans tabout
-vim.keymap.set("i", "jk", "<right>")
+--vim.keymap.set("i", "jk", "<right>")
 
 -- clear search highlights
 vim.keymap.set("n", "<leader>no", ":nohl<CR>")
@@ -33,7 +33,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- refactor all words in a file
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>a", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- better gg/G
 vim.keymap.set("n", "gg", "gg0")
