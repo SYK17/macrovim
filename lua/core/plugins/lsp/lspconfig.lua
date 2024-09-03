@@ -70,7 +70,23 @@ return {
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
         end
 
-        -- configure html server
+        --sourcekit-LSP
+        lspconfig.sourcekit.setup({
+            capabilities = vim.tbl_deep_extend("force", capabilities, {
+                workspace = {
+                    didChangeWatchedFiles = {
+                        dynamicRegistration = true
+                    }
+                }
+            }),
+            on_attach = on_attach,
+            filetypes = { "swift", "objective-c", "objective-cpp" },
+            root_dir = function(filename, bufnr)
+                return lspconfig.util.root_pattern("Package.swift", "*.xcodeproj", "*.xcworkspace")(filename, bufnr)
+                    or lspconfig.util.path.dirname(filename)
+            end,
+
+})        -- configure html server
         lspconfig["html"].setup({
             capabilities = capabilities,
             on_attach = on_attach,

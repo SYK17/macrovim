@@ -16,14 +16,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({{ import = "core.plugins" }, { import = "core.plugins.lsp"}, { import = "core.plugins.dap"}}, {
-    install = {
-        colorscheme = { "mies" },
-    },
-    checker = {
-        enabled = true,
-        notify = false,
-    },
-    change_detection = {
-        notify = true,
-    },
 })

@@ -2,7 +2,7 @@
 -- General Neovim key remaps
 ----------------------------
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 --------------------
 -- General
@@ -20,7 +20,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 --vim.keymap.set("i", "jk", "<right>")
 
 -- clear search highlights
-vim.keymap.set("n", "<leader>no", ":nohl<CR>")
+vim.keymap.set("n", "<leader>n", ":nohl<CR>")
 
 -- the greatest remap ever?
 vim.keymap.set("v", "<leader>p", '"_dp')
@@ -55,3 +55,7 @@ vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle("diagnost
 -- vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
 -- vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
 -- vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
+
+-- Lazy (in conflict with Harpoon <leader>l)
+-- vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { noremap = true, silent = true })
+

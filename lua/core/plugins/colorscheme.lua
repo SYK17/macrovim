@@ -10,38 +10,38 @@ return {
             vim.cmd('colorscheme github_light')
         end,
     },
-    {
-        'logico/typewriter',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme typewriter]])
-        end,
-    },
+--    {
+--        'logico/typewriter',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme typewriter]])
+--        end,
+--    },
     {   'rebelot/kanagawa.nvim',
         lazy = false,
         config = function()
             vim.cmd([[colorscheme kanagawa-dragon]])
         end,
     },
-    {   'yorickpeterse/nvim-grey',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme grey]])
-        end,
-    },
-    {   'andreasvc/vim-256noir',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme 256_noir]])
-        end,
-    },
-    {
-        'kdheepak/monochrome.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme monochrome]])
-        end,
-    },
+--    {   'yorickpeterse/nvim-grey',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme grey]])
+--        end,
+--    },
+--    {   'andreasvc/vim-256noir',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme 256_noir]])
+--        end,
+--    },
+--    {
+--        'kdheepak/monochrome.nvim',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme monochrome]])
+--        end,
+--    },
     {
         'SYK17/candle-grey',
         lazy = false,
@@ -62,10 +62,12 @@ return {
             vim.cmd([[colorscheme rams]])
         end,
     },
-    {   'shatur/neovim-ayu',
-        lazy = false,
-        config = function()
-
-        end,
-    },
+--    {
+--        'SYK17/xcode16',
+--        lazy = false,
+--        priority = 1000,
+--        config = function()
+--            vim.cmd([[colorscheme light_theme]])
+--        end,
+--    },
 }
