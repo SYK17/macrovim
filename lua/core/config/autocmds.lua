@@ -18,35 +18,40 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     end,
 })
 
--------------------------------
+----------------------
+-- Default colorscheme
+----------------------
+vim.cmd("colorscheme github_dark")
+
+--------------------------------------------
 -- Auto set background color via bash script
--------------------------------
-local function set_background()
-    local handle = io.popen('/bin/bash ~/.config/nvim/scripts/detect-macos-appearance.sh')
-    local result = handle:read("*a")
-    handle:close()
-
-    result = result:gsub("%s+", "")  -- Remove whitespace
-
-    vim.cmd("TransparentEnable")
-    if result == "dark" then
-        vim.o.background = "dark"
-        vim.cmd("colorscheme candle-grey-transparent")
-    else
-        vim.o.background = "light"
-        vim.cmd("colorscheme github_dark")
-    end
-end
-
--- Set the background on startup
-set_background()
-
--- Create an autocommand to check and update the background when Neovim gains focus
-vim.api.nvim_create_autocmd("FocusGained", {
-    callback = function()
-        set_background()
-    end,
-})
+--------------------------------------------
+--local function set_background()
+--    local handle = io.popen('/bin/bash ~/.config/nvim/scripts/detect-macos-appearance.sh')
+--    local result = handle:read("*a")
+--    handle:close()
+--
+--    result = result:gsub("%s+", "")  -- Remove whitespace
+--
+--    if result == "dark" then
+--        vim.o.background = "dark"
+--        vim.cmd("colorscheme candle-grey-transparent")
+--    else
+--        vim.o.background = "light"
+--        vim.cmd("colorscheme github_dark")
+--    end
+--end
+--
+---- Set the background on startup
+--set_background()
+--
+---- Create an autocommand to check and update the background when Neovim gains focus
+--vim.api.nvim_create_autocmd("FocusGained", {
+--    callback = function()
+--        set_background()
+--        vim.cmd("TransparentEnable")
+--    end,
+--})
 
 ----------------------
 -- Autotrigger ZenMode
