@@ -12,3 +12,4 @@ require("core.config.autocmds")
 
 -- Set the Python 3 host program for Neovim
 vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
+

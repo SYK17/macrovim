@@ -59,3 +59,5 @@ vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle("diagnost
 -- Lazy (in conflict with Harpoon <leader>l)
 -- vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { noremap = true, silent = true })
 
+-- Oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

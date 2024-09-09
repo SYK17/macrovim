@@ -62,12 +62,12 @@ return {
             vim.cmd([[colorscheme rams]])
         end,
     },
---    {
---        'SYK17/xcode16',
---        lazy = false,
---        priority = 1000,
---        config = function()
---            vim.cmd([[colorscheme light_theme]])
---        end,
---    },
+    {
+        'bekaboo/nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd([[colorscheme default]])
+        end,
+    },
 }
