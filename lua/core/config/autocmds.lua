@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 ----------------------
 -- Default colorscheme
 ----------------------
-vim.cmd("colorscheme macro")
+-- vim.cmd("colorscheme macro")
 
 --------------------------------------------
 -- Auto set background color via bash script
@@ -35,10 +35,10 @@ local function set_background()
 
     if result == "dark" then
         vim.o.background = "dark"
-        -- vim.cmd("colorscheme candle-grey-transparent")
+        vim.cmd("colorscheme macro")
     else
         vim.o.background = "light"
-        -- vim.cmd("colorscheme github_dark")
+        vim.cmd("colorscheme macro")
     end
 end
 

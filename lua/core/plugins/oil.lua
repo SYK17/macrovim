@@ -1,10 +1,25 @@
 return {
     'stevearc/oil.nvim',
     opts = function()
+        -- Print statement to verify configuration loading
+        print("Loading oil.nvim configuration")
+
         local oil = require('oil')
         local icons = require('utils.static').icons -- You may need to adjust this path
         local icon_file = vim.trim(icons.File)
         local icon_dir = vim.trim(icons.Folder)
+
+        -- Define highlight groups
+        vim.api.nvim_set_hl(0, 'OilPermissionNone', { fg = 'grey' })
+        vim.api.nvim_set_hl(0, 'OilPermissionRead', { fg = 'green' })
+        vim.api.nvim_set_hl(0, 'OilPermissionWrite', { fg = 'yellow' })
+        vim.api.nvim_set_hl(0, 'OilPermissionExecute', { fg = 'red' })
+        vim.api.nvim_set_hl(0, 'OilDir', { fg = 'blue' })
+        vim.api.nvim_set_hl(0, 'OilTypeFile', { fg = 'white' })
+        vim.api.nvim_set_hl(0, 'OilTypeDir', { fg = 'blue', bold = true })
+        vim.api.nvim_set_hl(0, 'OilTypeFifo', { fg = 'magenta' })
+        vim.api.nvim_set_hl(0, 'OilTypeLink', { fg = 'cyan' })
+        vim.api.nvim_set_hl(0, 'OilTypeSocket', { fg = 'purple' })
 
         local permission_hlgroups = setmetatable({
             ['-'] = 'OilPermissionNone',
