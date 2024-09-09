@@ -42,7 +42,6 @@ return {
         }
 
         return {
-            -- Include your setup options here
             columns = {
                 {
                     'type',
@@ -56,6 +55,7 @@ return {
                     highlight = function(type_str)
                         return type_hlgroups[type_str]
                     end,
+                    add_padding = true,
                 },
                 {
                     'permissions',
@@ -67,14 +67,15 @@ return {
                         end
                         return hls
                     end,
+                    add_padding = true,
                 },
-                { 'size', highlight = 'Special' },
-                { 'mtime', highlight = 'Number' },
+                { 'size', highlight = 'Special', add_padding = true },
+                { 'mtime', highlight = 'Number', add_padding = true },
                 {
                     'icon',
                     default_file = icon_file,
                     directory = icon_dir,
-                    add_padding = false,
+                    add_padding = true,
                 },
             },
             default_file_explorer = true,

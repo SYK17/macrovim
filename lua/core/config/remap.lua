@@ -49,7 +49,7 @@ vim.api.nvim_create_user_command('E', 'Explore', {force = true})
 --------------------
 
 -- Trouble
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle("diagnostics") end)
+-- vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle("diagnostics") end)
 -- vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
 -- vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
 -- vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
@@ -61,3 +61,13 @@ vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle("diagnost
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- ZenMode
+vim.keymap.set('n', '<leader>\\', function()
+    -- Check if ZenMode exists
+    if vim.fn.exists(':ZenMode') == 2 then
+        vim.cmd('ZenMode')
+    else
+        vim.notify('ZenMode is not available', vim.log.levels.WARN)
+    end
+end, { noremap = true, silent = true, desc = "Toggle ZenMode" })

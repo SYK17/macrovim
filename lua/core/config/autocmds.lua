@@ -49,7 +49,7 @@ set_background()
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
         set_background()
-        vim.cmd("TransparentEnable")
+--        vim.cmd("TransparentEnable")
     end,
 })
 
