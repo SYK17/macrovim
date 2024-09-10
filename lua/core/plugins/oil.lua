@@ -78,7 +78,7 @@ return {
                     add_padding = true,
                 },
             },
-            default_file_explorer = true,
+            default_file_explorer = false,
             buf_options = {
                 buflisted = false,
                 bufhidden = "hide",

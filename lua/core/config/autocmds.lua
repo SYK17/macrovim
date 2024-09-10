@@ -38,7 +38,7 @@ local function set_background()
         vim.cmd("colorscheme macro")
     else
         vim.o.background = "light"
-        vim.cmd("colorscheme macro")
+        vim.cmd("colorscheme quiet")
     end
 end
 
