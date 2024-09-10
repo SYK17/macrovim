@@ -15,18 +15,18 @@ return {
             vim.cmd([[colorscheme typewriter]])
         end,
     },
-    {   'rebelot/kanagawa.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme kanagawa-dragon]])
-        end,
-    },
-    {   'yorickpeterse/nvim-grey',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme grey]])
-        end,
-    },
+--    {   'rebelot/kanagawa.nvim',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme kanagawa-dragon]])
+--        end,
+--    },
+--    {   'yorickpeterse/nvim-grey',
+--        lazy = false,
+--        config = function()
+--            vim.cmd([[colorscheme grey]])
+--        end,
+--    },
     {   'andreasvc/vim-256noir',
         lazy = false,
         config = function()

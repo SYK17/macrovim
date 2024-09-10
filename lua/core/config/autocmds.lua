@@ -49,23 +49,7 @@ set_background()
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
         set_background()
---        vim.cmd("TransparentEnable")
+        require('lualine').setup()  -- Ensure lualine is set up again
+        vim.cmd('redrawstatus')     -- Force a redraw of the status line
     end,
 })
-
-----------------------
--- Autotrigger ZenMode
-----------------------
---vim.api.nvim_create_autocmd("BufEnter", {
---    callback = function()
---        -- Check if this is a real file and not the start screen
---        if vim.bo.buftype ~= "" or vim.bo.filetype == "" then
---            return
---        end
---
---        -- Check if Zen Mode is not already active
---        if vim.fn.exists(':ZenMode') == 2 and not vim.g.zen_mode_active then
---            vim.cmd("ZenMode")
---        end
---    end,
---})

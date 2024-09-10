@@ -23,7 +23,7 @@ Copyright (c) 2024 - M Λ C R O developers
 
             -- Footer (optional, remove if not needed)
             footer = function()
-                return "“Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.”"
+                return "“It's the job that's never started as takes longest to finish.”"
             end,
 
             -- Use a clean, centered layout
@@ -35,4 +35,3 @@ Copyright (c) 2024 - M Λ C R O developers
         })
     end
 }
-

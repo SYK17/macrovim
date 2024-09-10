@@ -62,6 +62,10 @@ vim.api.nvim_create_user_command('E', 'Explore', {force = true})
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+vim.keymap.set("n", "<leader>ol", function()
+  require("oil").open_float()
+end, { desc = "Open Oil in float" })
+
 -- ZenMode
 vim.keymap.set('n', '<leader>\\', function()
     -- Check if ZenMode exists
