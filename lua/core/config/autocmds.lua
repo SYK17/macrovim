@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 ----------------------
 -- Default colorscheme
 ----------------------
--- vim.cmd("colorscheme macro")
+vim.cmd("colorscheme macro")
 
 --------------------------------------------
 -- Auto set background color via bash script
@@ -38,7 +38,7 @@ local function set_background()
         vim.cmd("colorscheme macro")
     else
         vim.o.background = "light"
-        vim.cmd("colorscheme quiet")
+        vim.cmd("colorscheme macro")
     end
 end
 
@@ -49,6 +49,7 @@ set_background()
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
         set_background()
+        vim.cmd('TransparentEnable')  -- Enable transparency
         require('lualine').setup()  -- Ensure lualine is set up again
         vim.cmd('redrawstatus')     -- Force a redraw of the status line
     end,
