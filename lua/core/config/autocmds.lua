@@ -36,9 +36,11 @@ local function set_background()
     if result == "dark" then
         vim.o.background = "dark"
         vim.cmd("colorscheme macro")
+        vim.cmd('TransparentEnable')  -- Enable transparency
     else
         vim.o.background = "light"
         vim.cmd("colorscheme macro")
+        vim.cmd('TransparentDisable')  -- Enable transparency
     end
 end
 
@@ -49,7 +51,6 @@ set_background()
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
         set_background()
-        vim.cmd('TransparentEnable')  -- Enable transparency
         require('lualine').setup()  -- Ensure lualine is set up again
         vim.cmd('redrawstatus')     -- Force a redraw of the status line
     end,

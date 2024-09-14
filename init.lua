@@ -9,7 +9,6 @@ require("core.config.options")
 require("core.config.lazy-config")
 require("core.config.autocmds")
 require("core.plugins.treesitter")
-require("core.plugins.oil")
 require("core.plugins.mini-starter")
 
 -- Set the Python 3 host program for Neovim

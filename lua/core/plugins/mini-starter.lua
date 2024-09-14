@@ -23,7 +23,7 @@ Copyright (c) 2024 - M Λ C R O developers
 
             -- Footer (optional, remove if not needed)
             footer = function()
-                return "“It's the job that's never started as takes longest to finish.”"
+                return "“Truth is realized by small steps, but it is no small thing.”"
             end,
 
             -- Use a clean, centered layout

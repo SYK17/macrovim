@@ -4,7 +4,6 @@ return{
     config = function()
         local default_conf = {
             enable = true,
-            style = {},
             notify = false,
             priority = 0,
             delay = 0,
@@ -17,7 +16,10 @@ return{
         }
         require("hlchunk").setup({
             chunk = {
-                enable = true
+                enable = true,
+                style = {
+                    { fg = "#7f7f7f"},
+                },
             },
         })
     end

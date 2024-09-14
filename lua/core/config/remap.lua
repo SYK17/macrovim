@@ -41,8 +41,9 @@ vim.keymap.set("n", "G", "G$")
 vim.keymap.set("v", "gg", "gg0")
 vim.keymap.set("v", "G", "G$")
 
--- makes :E force default "Explore" over "EditQuery"
-vim.api.nvim_create_user_command('E', 'Explore', {force = true})
+-- NETRW
+vim.api.nvim_create_user_command('E', 'Explore', {force = true}) -- makes :E force default "Explore" over "EditQuery"
+
 
 --------------------
 -- Plugins
@@ -61,10 +62,6 @@ vim.api.nvim_create_user_command('E', 'Explore', {force = true})
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
-vim.keymap.set("n", "<leader>ol", function()
-  require("oil").open_float()
-end, { desc = "Open Oil in float" })
 
 -- ZenMode
 vim.keymap.set('n', '<leader>\\', function()

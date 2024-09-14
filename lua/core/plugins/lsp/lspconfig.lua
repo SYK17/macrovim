@@ -147,24 +147,33 @@ return {
         })
 
         -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = { -- custom settings for lua
-                Lua = {
-                    -- make the language server recognize "vim" global
-                    diagnostics = {
-                        globals = { "vim" },
-                    },
-                    workspace = {
-                        -- make language server aware of runtime files
-                        library = {
-                            [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                            [vim.fn.stdpath("config") .. "/lua"] = true,
-                        },
-                    },
-                },
-            },
-        })
+        -- lspconfig["lua_ls"].setup({
+        --     capabilities = capabilities,
+        --     on_attach = on_attach,
+        --     settings = { -- custom settings for lua
+        --         Lua = {
+        --             -- make the language server recognize "vim" global
+        --             diagnostics = {
+        --                 globals = { "vim" },
+        --             },
+        --             workspace = {
+        --                 -- make language server aware of runtime files
+        --                 library = {
+        --                     [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+        --                     [vim.fn.stdpath("config") .. "/lua"] = true,
+        --                 },
+        --             },
+        --             -- You might want to add these additional settings
+        --             runtime = {
+        --                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        --                 version = 'LuaJIT',
+        --             },
+        --             -- Do not send telemetry data containing a randomized but unique identifier
+        --             telemetry = {
+        --                 enable = false,
+        --             },
+        --         },
+        --     },
+        -- })
     end,
 }
