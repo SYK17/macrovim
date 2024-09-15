@@ -1,10 +1,11 @@
 return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
-    lazy = false,
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
+    lazy = true,
+    cmd = { "NvimTreeToggle" },
+    -- dependencies = {
+    --     "nvim-tree/nvim-web-devicons",
+    -- },
     config = function()
         require("nvim-tree").setup {
             sort_by = "case_sensitive",
