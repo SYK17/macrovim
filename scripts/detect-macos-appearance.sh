@@ -1,9 +1,8 @@
 #!/bin/bash
+# Get the current appearance using osascript instead
+appearance=$(osascript -e 'tell application "System Events" to tell appearance preferences to return dark mode')
 
-# Get the current appearance
-appearance=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
-
-if [ "$appearance" = "Dark" ]; then
+if [ "$appearance" = "true" ]; then
     echo "dark"
 else
     echo "light"

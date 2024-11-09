@@ -61,7 +61,12 @@ vim.api.nvim_create_user_command('E', 'Explore', {force = true}) -- makes :E for
 -- vim.keymap.set('n', '<leader>l', ':Lazy<CR>', { noremap = true, silent = true })
 
 -- Oil
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- Regular oil.nvim
+-- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- Floating oil.nvim with leader
+vim.keymap.set("n", "-", function()
+  require("oil").open_float()
+end, { desc = "Open parent directory (float)" })
 
 -- ZenMode
 vim.keymap.set('n', '<leader>\\', function()

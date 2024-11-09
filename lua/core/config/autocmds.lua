@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 ----------------------
 -- Default colorscheme
 ----------------------
-vim.cmd("colorscheme macro")
+vim.cmd("colorscheme 256_noir")
 
 --------------------------------------------
 -- Auto set background color via bash script
@@ -30,22 +30,26 @@ local function set_background()
     local handle = io.popen('/bin/bash ~/.config/nvim/scripts/detect-macos-appearance.sh')
     local result = handle:read("*a")
     handle:close()
-
     result = result:gsub("%s+", "")  -- Remove whitespace
-
     if result == "dark" then
         vim.o.background = "dark"
-        vim.cmd("colorscheme macro")
-        vim.cmd('TransparentEnable')  -- Enable transparency
+        vim.cmd("colorscheme 256_noir")
+        -- vim.cmd('TransparentEnable')
     else
         vim.o.background = "light"
-        vim.cmd("colorscheme macro")
-        vim.cmd('TransparentDisable')  -- Enable transparency
+        vim.cmd("colorscheme quiet")
+        -- vim.cmd('TransparentDisable')
     end
 end
 
--- Set the background on startup
+-- Check on startup
 set_background()
+
+-- Check whenever Neovim regains focus
+vim.api.nvim_create_autocmd("FocusGained", {
+    callback = set_background,
+    desc = "Check and update colorscheme based on system appearance"
+})
 
 -- Create an autocommand to check and update the background when Neovim gains focus
 vim.api.nvim_create_autocmd("FocusGained", {
