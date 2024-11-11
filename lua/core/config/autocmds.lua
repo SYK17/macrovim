@@ -34,11 +34,11 @@ local function set_background()
     if result == "dark" then
         vim.o.background = "dark"
         vim.cmd("colorscheme 256_noir")
-        -- vim.cmd('Transparentdisable')
+        vim.cmd('TransparentEnable')
     else
         vim.o.background = "light"
         vim.cmd("colorscheme macro")
-        -- vim.cmd('TransparentEable')
+        vim.cmd('TransparentEnable')
     end
 end
 

@@ -8,6 +8,7 @@ require("core.config.remap")
 require("core.config.options")
 require("core.config.lazy-config")
 require("core.config.autocmds")
+require('core.config.markdown-to-pdf')
 require("core.plugins.treesitter")
 require("core.plugins.mini-starter")
 
