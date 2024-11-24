@@ -7,10 +7,13 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- tabs & indents
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 8
+vim.opt.shiftwidth = 8
+vim.opt.softtabstop = 8
 vim.opt.expandtab = true
 vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.smarttab = true
 
 -- line wrapping
 vim.opt.wrap = false

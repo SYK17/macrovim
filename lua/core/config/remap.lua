@@ -41,9 +41,15 @@ vim.keymap.set("n", "G", "G$")
 vim.keymap.set("v", "gg", "gg0")
 vim.keymap.set("v", "G", "G$")
 
--- NETRW
-vim.api.nvim_create_user_command('E', 'Explore', {force = true}) -- makes :E force default "Explore" over "EditQuery"
-
+-- .MD file shortcuts
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(0, 'n', "<leader>c", "i- [ ] ", {
+			noremap = true, silent = true 
+		})
+	end
+})
 
 --------------------
 -- Plugins
@@ -65,15 +71,17 @@ vim.api.nvim_create_user_command('E', 'Explore', {force = true}) -- makes :E for
 -- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 -- Floating oil.nvim with leader
 vim.keymap.set("n", "-", function()
-  require("oil").open_float()
+	require("oil").open_float()
 end, { desc = "Open parent directory (float)" })
 
 -- ZenMode
 vim.keymap.set('n', '<leader>\\', function()
-    -- Check if ZenMode exists
-    if vim.fn.exists(':ZenMode') == 2 then
-        vim.cmd('ZenMode')
-    else
-        vim.notify('ZenMode is not available', vim.log.levels.WARN)
-    end
+	-- Check if ZenMode exists
+	if vim.fn.exists(':ZenMode') == 2 then
+		vim.cmd('ZenMode')
+	else
+		vim.notify('ZenMode is not available', vim.log.levels.WARN)
+	end
 end, { noremap = true, silent = true, desc = "Toggle ZenMode" })
+
+
