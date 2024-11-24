@@ -41,18 +41,15 @@ local function set_background()
         vim.cmd('TransparentDisable')
     end
 end
+
 -- Check on startup
 set_background()
--- Check whenever Neovim regains focus
-vim.api.nvim_create_autocmd("FocusGained", {
-    callback = set_background,
-    desc = "Check and update colorscheme based on system appearance"
-})
--- Create an autocommand to check and update the background when Neovim gains focus
+
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
-        set_background()
-        require('lualine').setup()  -- Ensure lualine is set up again
-        vim.cmd('redrawstatus')     -- Force a redraw of the status line
+        require("lualine").setup()
+        vim.cmd("redraw")
+        vim.cmd("redrawstatus")
     end,
+    desc = "Update colorscheme and redraw UI based on system appearance."
 })
