@@ -23,10 +23,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- Auto set background color via bash script
 --------------------------------------------
 
--- default colorscheme or fallback
-vim.g.SCHEME = "macro"  -- your default theme
+-- default color scheme or fallback
+vim.g.SCHEME = "256_noir"  -- your default theme
 
--- Load colorscheme on startup
+-- Load color scheme on startup
 vim.api.nvim_create_autocmd("VimEnter", {
     nested = true,
     callback = function()
@@ -34,14 +34,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end,
 })
 
--- Save colorscheme when changed
+-- Save color scheme when changed
 vim.api.nvim_create_autocmd("ColorScheme", {
     callback = function(params)
         vim.g.SCHEME = params.match
     end,
 })
 
--- Your existing background detection
+-- Dynamically change 'set bg=light/dark'
 local function set_background()
     local handle = io.popen('/bin/bash ~/.config/nvim/scripts/detect-macos-appearance.sh')
     local result = handle:read("*a")
@@ -63,6 +63,7 @@ set_background()
 
 vim.api.nvim_create_autocmd("FocusGained", {
     callback = function()
+        set_background()
         require("lualine").setup()
         vim.cmd("redraw")
         vim.cmd("redrawstatus")

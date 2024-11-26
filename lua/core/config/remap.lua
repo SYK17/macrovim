@@ -22,6 +22,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- clear search highlights
 vim.keymap.set("n", "<leader>n", ":nohl<CR>")
 
+-- toggle "spell"
+vim.keymap.set("n", "<leader>s", ":set invspell<CR>")
+
 -- the greatest remap ever?
 vim.keymap.set("v", "<leader>p", '"_dp')
 
@@ -33,7 +36,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- refactor all words in a file
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- better gg/G
 vim.keymap.set("n", "gg", "gg0")
@@ -69,6 +72,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Oil
 -- Regular oil.nvim
 -- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- Floating oil.nvim with leader
 vim.keymap.set("n", "-", function()
 	require("oil").open_float()
