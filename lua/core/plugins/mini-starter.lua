@@ -23,7 +23,7 @@ Copyright (c) 2024 - M Λ C R O developers
 
             -- Footer (optional, remove if not needed)
             footer = function()
-                return "“Truth is realized by small steps, but it is no small thing.”"
+                return "“A small but persistent discipline is a great force; for a soft drop falling persistently, hollows out hard rock.”"
             end,
 
             -- Use a clean, centered layout

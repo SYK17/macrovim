@@ -18,28 +18,44 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	end,
 })
 
-----------------------
--- Default colorscheme
-----------------------
--- vim.cmd("colorscheme 256_noir")
 
 --------------------------------------------
 -- Auto set background color via bash script
 --------------------------------------------
+
+-- default colorscheme or fallback
+vim.g.SCHEME = "macro"  -- your default theme
+
+-- Load colorscheme on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+    nested = true,
+    callback = function()
+        pcall(vim.cmd.colorscheme, vim.g.SCHEME)
+    end,
+})
+
+-- Save colorscheme when changed
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function(params)
+        vim.g.SCHEME = params.match
+    end,
+})
+
+-- Your existing background detection
 local function set_background()
     local handle = io.popen('/bin/bash ~/.config/nvim/scripts/detect-macos-appearance.sh')
     local result = handle:read("*a")
     handle:close()
     result = result:gsub("%s+", "")  -- Remove whitespace
+    
     if result == "dark" then
         vim.o.background = "dark"
-        vim.cmd("colorscheme macro")
-        vim.cmd('TransparentEnable')
     else
         vim.o.background = "light"
-        vim.cmd("colorscheme macro")
-        vim.cmd('TransparentDisable')
     end
+    
+    -- Use the saved scheme
+    pcall(vim.cmd.colorscheme, vim.g.SCHEME)
 end
 
 -- Check on startup

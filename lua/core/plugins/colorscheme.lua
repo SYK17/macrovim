@@ -97,4 +97,11 @@ return {
 			vim.cmd([[colorscheme rasmus]])
 		end,
 	},
+	{	"mcchrish/zenbones.nvim",
+        dependencies = { "rktjmp/lush.nvim" },
+        lazy = false,
+		config = function()
+			vim.cmd([[colorscheme zenbones]])
+		end,
+	},
 }
