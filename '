@@ -1,3 +1,4 @@
 return {
     "machakann/vim-sandwich",
+    lazy = true,
 }
