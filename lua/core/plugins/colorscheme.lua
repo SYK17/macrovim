@@ -1,14 +1,5 @@
 return {
     {
-        'projekt0n/github-nvim-theme',
-        lazy = false, -- make sure we load this during startup if it is your main colorscheme
-        config = function()
-            require('github-theme').setup({
-            })
-            vim.cmd('colorscheme github_light')
-        end,
-    },
-    {
         'logico/typewriter',
         lazy = false,
         config = function()
@@ -58,37 +49,6 @@ return {
         lazy = false,
         config = function()
             vim.cmd([[colorscheme rams]])
-        end,
-    },
-    {	'fenetikm/falcon',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme falcon]])
-        end,
-    },
-    {	'deparr/tairiki.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme tairiki]])
-        end,
-    },
-    {	'AlexvZyl/nordic.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme nordic]])
-        end,
-    },
-    {	'rmehri01/onenord.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme onenord]])
-        end,
-
-    },
-    {	"kvrohit/rasmus.nvim",
-        priority = 1000,
-        config = function()
-            vim.cmd([[colorscheme rasmus]])
         end,
     },
     {	"mcchrish/zenbones.nvim",

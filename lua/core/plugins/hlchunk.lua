@@ -21,6 +21,9 @@ return{
                     { fg = "#7f7f7f"},
                 },
             },
+            indent = {
+                enable = true
+            },
         })
     end
 }
