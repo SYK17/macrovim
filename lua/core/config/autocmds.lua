@@ -61,12 +61,25 @@ end
 -- Check on startup
 set_background()
 
-vim.api.nvim_create_autocmd("FocusGained", {
+-- vim.api.nvim_create_autocmd("FocusGained", {
+--     callback = function()
+--         set_background()
+--         require("lualine").setup()
+--         vim.cmd("redraw")
+--         vim.cmd("redrawstatus")
+--     end,
+--     desc = "Update colorscheme and redraw UI based on system appearance."
+-- })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
     callback = function()
-        set_background()
-        require("lualine").setup()
-        vim.cmd("redraw")
-        vim.cmd("redrawstatus")
+        vim.opt_local.wrap = true
+        vim.opt_local.linebreak = true
+        vim.opt_local.textwidth = 125
+        -- Create a buffer-local mapping for Tab
+        -- <cmd>set expandtab<CR> ensures spaces are used
+        -- <C-V><Tab> inputs a literal tab character
+        vim.keymap.set('i', '<Tab>', '&nbsp;&nbsp;&nbsp;&nbsp;', { buffer = true, silent = true })
     end,
-    desc = "Update colorscheme and redraw UI based on system appearance."
 })

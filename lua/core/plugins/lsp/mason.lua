@@ -30,7 +30,7 @@ return {
 				"jsonls",
 				"html",
 				"cssls",
-				"tailwindcss",
+				-- "tailwindcss",
 				"lua_ls",
 				"emmet_ls",
 			},

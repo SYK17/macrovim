@@ -48,14 +48,25 @@ return {
     {	'SYK17/rams.vim',
         lazy = false,
         config = function()
-            vim.cmd([[colorscheme rams]])
+            vim.cmd.colorscheme("rams")
         end,
     },
-    {	"mcchrish/zenbones.nvim",
-        dependencies = { "rktjmp/lush.nvim" },
-        lazy = false,
+    {
+        "p00f/alabaster.nvim",
         config = function()
-            vim.cmd([[colorscheme zenbones]])
+            vim.cmd([[colorscheme alabaster]])
+        end,
+    },
+    {
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        config = function()
+            require('github-theme').setup({
+                -- ...
+            })
+
+            vim.cmd('colorscheme github_dark')
         end,
     },
 }
