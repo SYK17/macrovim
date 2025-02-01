@@ -44,6 +44,27 @@ vim.keymap.set("n", "G", "G$")
 vim.keymap.set("v", "gg", "gg0")
 vim.keymap.set("v", "G", "G$")
 
+-- Function to toggle background between light and dark
+local function toggle_background()
+    -- Get current background setting
+    local current_bg = vim.o.background
+    
+    -- Toggle to opposite background
+    if current_bg == "light" then
+        vim.o.background = "dark"
+    else
+        vim.o.background = "light"
+    end
+    
+    -- Reapply colorscheme to ensure proper updating
+    -- Using pcall in case SCHEME isn't set
+    pcall(vim.cmd.colorscheme, vim.g.SCHEME)
+end
+
+-- Create the keymapping
+vim.keymap.set('n', '<leader>c', toggle_background, 
+    { desc = "Toggle between light/dark background" })
+
 -- .MD file shortcuts
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
