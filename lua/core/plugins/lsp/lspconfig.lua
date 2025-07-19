@@ -97,6 +97,12 @@ return {
                         on_attach = on_attach,
                 })
 
+                -- configure racket
+                lspconfig.racket_langserver.setup({
+                        capabilities = capabilities,
+                        on_attach = on_attach,
+                })
+
                 -- -- configure tailwindcss server
                 -- lspconfig["tailwindcss"].setup({
                 --         capabilities = capabilities,

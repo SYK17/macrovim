@@ -1,17 +1,4 @@
 return {
-    {
-        'logico/typewriter',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme typewriter]])
-        end,
-    },
-    {   'rebelot/kanagawa.nvim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme kanagawa-dragon]])
-        end,
-    },
     {	'yorickpeterse/nvim-grey',
         lazy = false,
         config = function()
@@ -39,25 +26,6 @@ return {
         end,
     },
     {
-        'SYK17/Mies.vim',
-        lazy = false,
-        config = function()
-            vim.cmd([[colorscheme mies]])
-        end,
-    },
-    {	'SYK17/rams.vim',
-        lazy = false,
-        config = function()
-            vim.cmd.colorscheme("rams")
-        end,
-    },
-    {
-        "p00f/alabaster.nvim",
-        config = function()
-            vim.cmd([[colorscheme alabaster]])
-        end,
-    },
-    {
         'projekt0n/github-nvim-theme',
         name = 'github-theme',
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -67,6 +35,57 @@ return {
             })
 
             vim.cmd('colorscheme github_dark')
+        end,
+    },
+    {
+        'cvigilv/patana.nvim',
+        config = function()
+            vim.cmd([[colorscheme patana]])
+        end,
+    },
+    {
+        'fenetikm/falcon',
+        config = function()
+            vim.cmd([[colorscheme falcon]])
+        end,
+    },
+    {
+        "slugbyte/lackluster.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("lackluster")
+            vim.cmd.colorscheme("lackluster-hack") -- my favorite
+        end,
+    },
+    {
+        'jaredgorski/fogbell.vim',
+        config = function()
+            vim.cmd([[colorscheme fogbell]])
+        end,
+    },
+    {
+        'LuRsT/austere.vim',
+        config = function()
+            vim.cmd([[colorscheme austere]])
+        end,
+    },
+    {
+        'ntk148v/komau.vim',
+        config = function()
+            vim.cmd([[colorscheme komau]])
+        end,
+    },
+    {
+        'syk17/mies.vim',
+        config = function()
+            vim.cmd([[colorscheme mies]])
+        end,
+    },
+    {
+        'syk17/rams.vim',
+        config = function()
+            vim.cmd([[colorscheme rams]])
         end,
     },
 }

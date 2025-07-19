@@ -1,10 +1,10 @@
 return{
     {
         "folke/zen-mode.nvim",
-        lazy = true,
+        lazy = false,
         opts = {
             window = {
-                width = .70
+                width = .50
             },
             ruler = false,
         }

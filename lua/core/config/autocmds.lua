@@ -47,13 +47,13 @@ local function set_background()
     local result = handle:read("*a")
     handle:close()
     result = result:gsub("%s+", "")  -- Remove whitespace
-    
+
     if result == "dark" then
         vim.o.background = "dark"
     else
         vim.o.background = "light"
     end
-    
+
     -- Use the saved scheme
     pcall(vim.cmd.colorscheme, vim.g.SCHEME)
 end

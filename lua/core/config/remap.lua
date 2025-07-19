@@ -16,9 +16,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- poor mans tabout
---vim.keymap.set("i", "jk", "<right>")
-
 -- clear search highlights
 vim.keymap.set("n", "<leader>n", ":nohl<CR>")
 

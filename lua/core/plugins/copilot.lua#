@@ -1,0 +1,15 @@
+return {
+    "github/copilot.vim",
+    -- event = "InsertEnter",  -- Lazy load the plugin until Insert mode
+    config = function()
+        -- Set up Copilot mappings
+        vim.keymap.set("i", "<C-Enter>", 'copilot#Accept()', { expr = true, silent = true })
+        -- Additional keymaps that won't conflict with your cmp setup
+        vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Next()', { expr = true, silent = true })
+        vim.api.nvim_set_keymap("i", "<C-k>", 'copilot#Previous()', { expr = true, silent = true })
+        vim.api.nvim_set_keymap("i", "<C-o>", 'copilot#Dismiss()', { expr = true, silent = true })
+        
+        -- Disable Copilot on startup
+        vim.g.copilot_enabled = 0
+    end,
+}
