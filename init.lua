@@ -15,3 +15,5 @@ require("core.plugins.treesitter")
 
 -- Set the Python 3 host program for Neovim
 vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
+-- Points Neovim to the Python in venv
+vim.g.python3_host_prog = "/Users/sammykim/.nvim-venv/bin/python3"

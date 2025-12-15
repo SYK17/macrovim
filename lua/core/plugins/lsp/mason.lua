@@ -30,7 +30,6 @@ return {
 				"jsonls",
 				"html",
 				"cssls",
-				-- "tailwindcss",
 				"lua_ls",
 				"emmet_ls",
 			},
@@ -42,9 +41,6 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"eslint_d", -- js linter
 			},
 		})
 	end,

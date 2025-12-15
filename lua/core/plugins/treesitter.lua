@@ -1,6 +1,7 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+        priority = 900,
         event = { "BufReadPre", "BufNewFile" },
         build = ":TSUpdate",
         config = function()
