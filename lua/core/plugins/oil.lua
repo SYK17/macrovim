@@ -52,14 +52,13 @@ return {
             -- Custom keymaps
             keymaps = {
                 ['g?'] = 'actions.show_help',
-                ['K'] = 'actions.preview',  -- Preview functionality
-                ['<C-k>'] = 'actions.preview',
+                ['P'] = 'actions.preview',  -- Preview functionality
                 ['-'] = 'actions.parent',
                 ['='] = 'actions.select',
                 ['+'] = 'actions.select',
                 ['<CR>'] = 'actions.select',
                 ['<C-h>'] = 'actions.toggle_hidden',    -- TODO: figure out why this key doesn't work.
-                ['gh'] = 'actions.toggle_hidden',
+                ['H'] = 'actions.toggle_hidden',
                 ['gs'] = 'actions.change_sort',
                 ['gx'] = 'actions.open_external',
                 ['gY'] = 'actions.copy_entry_filename',

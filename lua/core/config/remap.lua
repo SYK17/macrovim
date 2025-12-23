@@ -88,14 +88,5 @@ vim.keymap.set("n", "-", function()
 	require("oil").open_float()
 end, { desc = "Open parent directory (float)" })
 
--- ZenMode
-vim.keymap.set('n', '<leader>\\', function()
-	-- Check if ZenMode exists
-	if vim.fn.exists(':ZenMode') == 2 then
-		vim.cmd('ZenMode')
-	else
-		vim.notify('ZenMode is not available', vim.log.levels.WARN)
-	end
-end, { noremap = true, silent = true, desc = "Toggle ZenMode" })
-
-
+-- Neo-tree
+vim.keymap.set("n", "<leader>e", ':Neotree toggle<CR>', { noremap = true, silent = true })

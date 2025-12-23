@@ -15,6 +15,13 @@ return {
         local cmp = require("cmp")
         local luasnip = require("luasnip")
         local lspkind = require("lspkind")
+        local opts = {
+            sources = cmp.config.sources{
+                { name = "nvim_lsp" },
+                { name = "buffer" },
+                { name = "path" },
+            },
+        }
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
         require("luasnip.loaders.from_vscode").lazy_load()
@@ -52,3 +59,4 @@ return {
         })
     end,
 }
+
