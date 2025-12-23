@@ -41,6 +41,10 @@ vim.keymap.set("n", "G", "G$")
 vim.keymap.set("v", "gg", "gg0")
 vim.keymap.set("v", "G", "G$")
 
+-- move between buffers
+vim.keymap.set("n", "H", ":bprevious<CR>")
+vim.keymap.set("n", "L", ":bnext<CR>")
+
 -- Function to toggle background between light and dark
 local function toggle_background()
     -- Get current background setting
